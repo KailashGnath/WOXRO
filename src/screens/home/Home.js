@@ -1,20 +1,41 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, ScrollView } from 'react-native'
+import React, { useEffect, useState, useContext } from 'react'
 import Styles from './Style'
+import Header from '@components/header/Header'
+import Search from '@components/searchbar/Search'
+import Selector from './selector/Selector'
+import Office from './office/Office'
+import Appcontext from '../../common/Constants'
+
 
 const Home = () => {
+  const [data, setdata] = useState()
+  const { flatlist, setflatlist } = useContext(Appcontext)
+
+
+  useEffect(() => {
+    // fetch('https://api.xentice.com/api/postadSelect')
+    //   .then((response) => response.json())
+    //   .then((data) => setdata(data));
+    console.log("context data is", flatlist);
+
+  }, [])
+
   return (
     <View style={Styles._main}>
-      {/* header */}
-      <View style={{ flexDirection: "row", paddingHorizontal: 20 }}>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-
+      <ScrollView>
+        <Header />
+        <Search />
+        <Selector />
+        <Office data={flatlist} />
+        <Office data={flatlist} />
+        <Office data={flatlist} />
+        {/* <Text style={Styles._text}>Home</Text>
+      <Text style={{ fontSize: 20 }}>Home</Text> */}
+        <View style={{ height: 30 }}>
         </View>
-      </View>
-      {/* header */}
-      <Text style={Styles._text}>Home</Text>
-      <Text style={{ fontSize: 20 }}>Home</Text>
-    </View>
+      </ScrollView>
+    </View >
   )
 }
 

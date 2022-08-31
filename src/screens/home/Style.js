@@ -5,8 +5,8 @@ import Fonts from "../../assets/Fonts"
 const Styles = StyleSheet.create({
   _main: {
     flex: 1,
-    backgroundColor: "skyblue",
-    fontFamily: Fonts.bold
+    fontFamily: Fonts.bold,
+    backgroundColor: "#fff"
   },
   _text: {
     fontFamily: Fonts.bold,
