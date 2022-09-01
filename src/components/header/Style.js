@@ -16,7 +16,8 @@ const Style = StyleSheet.create({
   },
   _text: {
     fontSize: 33,
-    color: "blue"
+    color: "#105aff",
+    fontFamily: Fonts.medium
   },
   _rightView: {
     height: 40,

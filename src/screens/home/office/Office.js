@@ -5,10 +5,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const Office = (data) => {
   const dat = JSON.parse(data.data[0]?.images)
-  console.log("inside office data", dat[0])
 
   const Card = ({ img }) => {
-    console.log("inside final image", img[0])
+    // console.log("inside final image", img[0])
     return (
       <View style={Styles._card}>
         <View style={Styles._like}>

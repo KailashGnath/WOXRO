@@ -8,23 +8,15 @@ import Office from './office/Office'
 import Appcontext from '../../common/Constants'
 
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const [data, setdata] = useState()
   const { flatlist, setflatlist } = useContext(Appcontext)
 
 
-  useEffect(() => {
-    // fetch('https://api.xentice.com/api/postadSelect')
-    //   .then((response) => response.json())
-    //   .then((data) => setdata(data));
-    console.log("context data is", flatlist);
-
-  }, [])
-
   return (
     <View style={Styles._main}>
       <ScrollView>
-        <Header />
+        <Header navigation={navigation} to={"Property"} />
         <Search />
         <Selector />
         <Office data={flatlist} />
