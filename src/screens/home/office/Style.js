@@ -58,12 +58,12 @@ const Styles = StyleSheet.create({
 
   },
   _officeName: {
-    fontSize: 13,
+    fontSize: 12,
     fontFamily: Fonts.bold,
     color: "#000"
   },
   _amount: {
-    fontSize: 11,
+    fontSize: 10,
     paddingTop: 2,
     color: "red",
     fontWeight: "bold",
